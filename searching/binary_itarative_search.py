@@ -7,14 +7,14 @@ def binary_Search_iterative1(data, target):
     Returns:
         [bool]: [True if target is founf else Fasle]"""  
     low = 0
-    high = len(data) 
+    high = len(data) - 1
+
     while low <= high:
         mid = (low + high) // 2
         if data[mid] == target:
             return True
         elif data[mid] > target:
-            high = mid  
+            high = mid - 1 
         else:
-            low = mid
-    return False]
-
+            low = mid + 1
+    return False
